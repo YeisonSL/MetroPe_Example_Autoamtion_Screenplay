@@ -1,6 +1,6 @@
-<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="CyberMetro" skipped="0" tests="1" time="52.27" timestamp="2019-08-02 10:29:51"><testcase name="find a product"><error message="Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@35eb4a3b&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@35eb4a3b
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="CyberMetro" skipped="0" tests="1" time="50.41" timestamp="2019-08-02 03:17:08"><testcase name="find a product"><error message="Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@6a638c79&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@6a638c79
 Expected: is &lt;true&gt;
-     but: was &lt;false&gt;</error><system-err>Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@35eb4a3b
+     but: was &lt;false&gt;</error><system-err>Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@6a638c79
 Expected: is &lt;true&gt;
      but: was &lt;false&gt;&#13;
 pe.cybermetro.stepdefinitions.CyberMetroStepDefinitios.heShouldSeeAtLeastVideoListed(CyberMetroStepDefinitios.java:46)&#13;

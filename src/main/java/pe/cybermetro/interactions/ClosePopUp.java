@@ -1,7 +1,6 @@
 package pe.cybermetro.interactions;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
-import static pe.cybermetro.userinterfaces.CyberMetroHomePage.POP_UP;
 
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Interaction;

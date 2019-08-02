@@ -6,6 +6,7 @@ import net.serenitybdd.screenplay.targets.Target;
 
 public class CyberMetroProductPage extends PageObject {
 	
-	public static final Target PRODUCT = Target.the("Product").located(By.cssSelector("product-add-to-cart product-add-to-cart--product-view btn red add-to-cart"));
+	public static final Target PRODUCT_PAGE = Target.the("Produuct Page").located(By.id("image"));
+	public static final Target PRODUCT = Target.the("Product").located(By.xpath("//*[@class='product-add-to-cart__text desktop']"));
 	
 }

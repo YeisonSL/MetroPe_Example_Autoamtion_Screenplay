@@ -11,7 +11,7 @@ import pe.cybermetro.interactions.WriteProductAndSearch;
 import static pe.cybermetro.userinterfaces.CyberMetroHomePage.POP_UP;
 import static pe.cybermetro.userinterfaces.CyberMetroHomePage.SEARCH;
 import static pe.cybermetro.userinterfaces.CyberMetroResultPage.LIST_OF_PRODUCTS;
-import static pe.cybermetro.userinterfaces.CyberMetroProductPage.PRODUCT;
+import static pe.cybermetro.userinterfaces.CyberMetroProductPage.*;
 
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
@@ -32,7 +32,7 @@ public class SearchAndAdd implements Task {
     	actor.attemptsTo(WaitForElement.visibility(POP_UP, 3));
     	actor.attemptsTo(ClosePopUp.inThePage(POP_UP));
         actor.attemptsTo(WriteProductAndSearch.inThePage(product, SEARCH));
-        actor.attemptsTo(AddProduct.the(LIST_OF_PRODUCTS,PRODUCT,product));
+        actor.attemptsTo(AddProduct.the(LIST_OF_PRODUCTS, PRODUCT,product));
         
     }
 
