@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite errors="1" failures="0" name="CyberMetro" skipped="0" tests="1" time="52.27" timestamp="2019-08-02 10:29:51"><testcase name="find a product"><error message="Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@35eb4a3b&#10;Expected: is &lt;true&gt;&#10;     but: was &lt;false&gt;" type="java.lang.AssertionError">Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@35eb4a3b
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;</error><system-err>Los articulos listados no es igual al que espero - Expected net.serenitybdd.screenplay.QuestionSubject@35eb4a3b
+Expected: is &lt;true&gt;
+     but: was &lt;false&gt;&#13;
+pe.cybermetro.stepdefinitions.CyberMetroStepDefinitios.heShouldSeeAtLeastVideoListed(CyberMetroStepDefinitios.java:46)&#13;
+✽.he should see at least 1 product listed(src/test/resources/features/cyber_metro.feature:10)&#13;
+</system-err></testcase></testsuite>
