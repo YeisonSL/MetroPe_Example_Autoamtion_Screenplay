@@ -27,6 +27,8 @@ public <T extends Actor> void performAs(T actor) {
 				actor.attemptsTo(Click.on(element));
 			}
 		}
+	}else {
+		System.out.println("Producto no encontrado");
 	}
 }
 

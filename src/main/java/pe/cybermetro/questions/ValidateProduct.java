@@ -5,11 +5,11 @@ import net.serenitybdd.screenplay.Question;
 
 import static pe.cybermetro.userinterfaces.CyberMetroResultPage.LIST_OF_PRODUCTS;
 
-public class SelectedArticle implements Question<Boolean> {
+public class ValidateProduct implements Question<Boolean> {
 
     private int theProductName;
 
-    public SelectedArticle (int theProductName){
+    public ValidateProduct (int theProductName){
         this.theProductName = theProductName;
     }
 
@@ -20,7 +20,7 @@ public class SelectedArticle implements Question<Boolean> {
     }
 
     public static Question<Boolean> are(int theProductName) {
-        return new SelectedArticle(theProductName);
+        return new ValidateProduct(theProductName);
     }
 
 }

@@ -4,6 +4,7 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.Task;
 import net.thucydides.core.annotations.Step;
+import pe.cybermetro.interactions.AddProduct;
 import pe.cybermetro.interactions.ClosePopUp;
 import pe.cybermetro.interactions.WaitForElement;
 import pe.cybermetro.interactions.WriteProductAndSearch;
@@ -32,7 +33,7 @@ public class SearchAndAdd implements Task {
     	actor.attemptsTo(WaitForElement.visibility(POP_UP, 3));
     	actor.attemptsTo(ClosePopUp.inThePage(POP_UP));
         actor.attemptsTo(WriteProductAndSearch.inThePage(product, SEARCH));
-        actor.attemptsTo(AddProduct.the(LIST_OF_PRODUCTS, PRODUCT,product));
+        actor.attemptsTo(AddProduct.the(LIST_OF_PRODUCTS, PRODUCT,product, ADD_PRODUCT));
         
     }
 

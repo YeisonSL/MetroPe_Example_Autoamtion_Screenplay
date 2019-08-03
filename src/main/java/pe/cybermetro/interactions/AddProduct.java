@@ -1,4 +1,4 @@
-package pe.cybermetro.tasks;
+package pe.cybermetro.interactions;
 
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
@@ -8,20 +8,21 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Scroll;
 import net.serenitybdd.screenplay.targets.Target;
 import net.thucydides.core.annotations.Step;
-import pe.cybermetro.interactions.SelectProduct;
-import pe.cybermetro.interactions.WaitForElement;
 
 public class AddProduct implements Task {
 	
 	private String product;
 	private Target element;
 	private Target elementBtn;
+	private Target elementCarBtn;
 
-	public AddProduct(Target element, Target elementBtn, String product) {
+	public AddProduct(Target element, Target elementBtn, String product, Target elementCarBtn ) {
 		
 		this.product = product;
 		this.element = element;
 		this.elementBtn = elementBtn;
+		this.elementCarBtn = elementCarBtn;
+		
 	}
 
 	@Step("the actor add the product to the cart #product")
@@ -31,28 +32,13 @@ public class AddProduct implements Task {
 					actor.attemptsTo(SelectProduct.selectProduct(element, product));
 					actor.attemptsTo(WaitForElement.visibility(elementBtn, 3));
 					actor.attemptsTo(Scroll.to(elementBtn));
-//					actor.attemptsTo(Click.on(elementBtn));
-//					
-//					actor.attemptsTo(Click.on(elementBtn));
-//					actor.attemptsTo(Click.on(elementBtn));
+					actor.attemptsTo(WaitForElement.visibility(elementBtn, 3));
+					actor.attemptsTo(Click.on(elementCarBtn));
 					
 				}
 			
-		
-		
-//	}
-//		
-//		while (!elementBtn.resolveAllFor(actor).isEmpty()) {
-//			System.out.println(elementPage.resolveAllFor(actor).size());
-			
-		
-				
-		
-		
-
 	
-
-	public static AddProduct the(Target element,Target elementBtn, String product) {
-		return instrumented(AddProduct.class, element, elementBtn, product);
+	public static AddProduct the(Target element,Target elementBtn, String product, Target elementCarBtn) {
+		return instrumented(AddProduct.class, element, elementBtn, product, elementCarBtn);
 	}
 }
