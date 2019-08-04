@@ -6,21 +6,20 @@ import net.serenitybdd.screenplay.Performable;
 import net.serenitybdd.screenplay.actions.Open;
 import net.serenitybdd.screenplay.targets.Target;
 
-
 import static net.serenitybdd.screenplay.Tasks.instrumented;
 
 public class GoTo implements Interaction {
 
-    @Override
-    public <T extends Actor> void performAs(T actor) {
-        actor.attemptsTo(
-                Open.url("https://www.metro.pe/")
-                
-        );
-    }
+	// Iterracion de abrir navegador e ingresar a una URL
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(Open.url("https://www.metro.pe/")
 
-    public static Performable theApp (Target theApp){
-        return  instrumented(GoTo.class , theApp);
-    }
+		);
+	}
+
+	public static Performable theWeb(Target theApp) {
+		return instrumented(GoTo.class, theApp);
+	}
 
 }

@@ -1,6 +1,5 @@
 package pe.cybermetro.stepdefinitions;
 
-
 import pe.cybermetro.exceptions.*;
 import pe.cybermetro.interactions.GoTo;
 import pe.cybermetro.questions.*;
@@ -19,28 +18,27 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
 public class CyberMetroStepDefinitios {
-	
-	 @Before
-	    public void setTheStage() {
-	        OnStage.setTheStage(new OnlineCast());
-	    }
-	 
-	    @Given("^that (.*) wants to add a product$")
-	    public void thatMikeWantsToWatchAVideo(String name) throws Exception {
-	        theActorCalled(name).attemptsTo(GoTo.theApp(SEARCH));
-	    }
-	   
-	    @When("^he searches the product (.*) add it to the cart$")
-	    public void heSearchesTheProducto(String producto) throws Exception {
-	        theActorInTheSpotlight().attemptsTo(SearchAndAdd.the(producto));
-	    }
-	    
 
-	    @Then("^he should see at least (.*) product listed$")
-	    public void heShouldSeeAtLeastVideoListed(String theProductName) throws Exception {
-	    	theActorInTheSpotlight().attemptsTo(ValidateProductCart.the(theProductName));
-	        theActorInTheSpotlight().should(seeThat(ValidateProduct.are(theProductName))
-	                .orComplainWith(UnexpectedProduct.class, UNEXPECTED_PRODUCT_CART));
+	@Before
+	public void setTheStage() {
+		OnStage.setTheStage(new OnlineCast());
+	}
+
+	@Given("^that (.*) wants to add a product$")
+	public void thatMikeWantsToWatchAVideo(String name) throws Exception {
+		theActorCalled(name).attemptsTo(GoTo.theWeb(SEARCH));
+	}
+
+	@When("^he searches the product (.*) add it to the cart$")
+	public void heSearchesTheProducto(String producto) throws Exception {
+		theActorInTheSpotlight().attemptsTo(SearchAndAdd.seachTheProduct(producto));
+	}
+
+	@Then("^he should see at least (.*) product listed$")
+	public void heShouldSeeAtLeastVideoListed(String theProductName) throws Exception {
+		theActorInTheSpotlight().attemptsTo(ValidateProductCart.validateProduct(theProductName));
+		theActorInTheSpotlight().should(seeThat(ValidateProduct.validate(theProductName))
+				.orComplainWith(UnexpectedProduct.class, UNEXPECTED_PRODUCT_CART));
 	}
 
 }

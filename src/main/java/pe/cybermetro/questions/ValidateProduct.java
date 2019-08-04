@@ -14,6 +14,7 @@ public class ValidateProduct implements Question<Boolean> {
 
 	}
 
+	// Validar si el producto esta en el carrito 
 	@Override
 	public Boolean answeredBy(Actor actor) {
 
@@ -21,7 +22,7 @@ public class ValidateProduct implements Question<Boolean> {
 
 	}
 
-	public static Question<Boolean> are(String product) {
+	public static Question<Boolean> validate(String product) {
 		return new ValidateProduct(product);
 	}
 

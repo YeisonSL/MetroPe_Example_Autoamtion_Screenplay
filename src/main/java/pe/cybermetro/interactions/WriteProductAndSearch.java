@@ -10,28 +10,26 @@ import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Hit;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class WriteProductAndSearch implements Interaction{
+public class WriteProductAndSearch implements Interaction {
 	private String product;
 	private Target element;
-	
-public WriteProductAndSearch(String product, Target element) {
-	
+
+	public WriteProductAndSearch(String product, Target element) {
+
 		this.product = product;
 		this.element = element;
 	}
-@Override
-public <T extends Actor> void performAs(T actor) {
 
-	   actor.attemptsTo(
-               Enter.theValue(product).into(element),
-               Hit.the(Keys.ENTER).into(element)
-       );
-	
+	// Escribir producto y buscar en la pagina
+	@Override
+	public <T extends Actor> void performAs(T actor) {
 
-	
-}
-public static WriteProductAndSearch inThePage(String  product , Target element) {
-	return instrumented(WriteProductAndSearch.class,product,element);
-	
-}
+		actor.attemptsTo(Enter.theValue(product).into(element), Hit.the(Keys.ENTER).into(element));
+
+	}
+
+	public static WriteProductAndSearch writeiInThePage(String product, Target element) {
+		return instrumented(WriteProductAndSearch.class, product, element);
+
+	}
 }

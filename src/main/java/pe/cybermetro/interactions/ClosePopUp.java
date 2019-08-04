@@ -8,22 +8,23 @@ import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.conditions.Check;
 import net.serenitybdd.screenplay.targets.Target;
 
-public class ClosePopUp implements Interaction{
-private Target element;
+public class ClosePopUp implements Interaction {
+	private Target element;
 
-public ClosePopUp(Target element) {
+	public ClosePopUp(Target element) {
 
-	this.element = element;
-}
-
-@Override
-	public <T extends Actor> void performAs(T actor) {
-	actor.attemptsTo(Check.whether(element.resolveFor(actor).isPresent()).andIfSo(Click.on(element)));
-		
+		this.element = element;
 	}
 
-public static ClosePopUp inThePage(Target element ) {
-	return instrumented(ClosePopUp.class,element);
-	
-}
+//Interaccion para cerrar mensaje de alerta
+	@Override
+	public <T extends Actor> void performAs(T actor) {
+		actor.attemptsTo(Check.whether(element.resolveFor(actor).isPresent()).andIfSo(Click.on(element)));
+
+	}
+
+	public static ClosePopUp closePopUp(Target element) {
+		return instrumented(ClosePopUp.class, element);
+
+	}
 }

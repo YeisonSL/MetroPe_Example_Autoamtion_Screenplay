@@ -18,6 +18,7 @@ public class GoToCart implements Task {
 		this.elementGoCart = elementGoCart;
 	}
 
+	// Iterraciones para ir al carrito de compras
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 		actor.attemptsTo(WaitForElement.visibility(elementCarBtn, 3));
