@@ -13,7 +13,7 @@ El siguiente proyecto consiste en la automatización de la búsqueda de un product
     
 # Requerimientos
 
-Para correr el proyecto se necesita Java JDK 1.8 y Gradle preferiblemente con la versión 4.7.
+Para correr el proyecto se necesita Java JDK 1.8 y Gradle preferiblemente con la versión 5.4.
 
 #  Para correr el proyecto
 
