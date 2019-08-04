@@ -3,24 +3,26 @@ package pe.cybermetro.questions;
 import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 
-import static pe.cybermetro.userinterfaces.CyberMetroResultPage.LIST_OF_PRODUCTS;
+import static pe.cybermetro.userinterfaces.CyberMetroCartPage.*;
 
 public class ValidateProduct implements Question<Boolean> {
 
-    private int theProductName;
+	private String product;
 
-    public ValidateProduct (int theProductName){
-        this.theProductName = theProductName;
-    }
+	public ValidateProduct(String product) {
+		this.product = product;
 
-    @Override
-    public Boolean answeredBy(Actor actor) {
+	}
 
-        return LIST_OF_PRODUCTS.resolveAllFor(actor).size()>=theProductName;
-    }
+	@Override
+	public Boolean answeredBy(Actor actor) {
 
-    public static Question<Boolean> are(int theProductName) {
-        return new ValidateProduct(theProductName);
-    }
+		return PRODUCT_IN_THE_CART.resolveFor(actor).getText().equals(product);
+
+	}
+
+	public static Question<Boolean> are(String product) {
+		return new ValidateProduct(product);
+	}
 
 }

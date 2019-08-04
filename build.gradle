@@ -33,21 +33,12 @@ dependencies {
     compile 'net.serenity-bdd:serenity-screenplay-webdriver:$serenity_version'
     compile("net.serenity-bdd:serenity-rest-assured:$serenity_version")
     compile 'org.slf4j:slf4j-simple:1.7.12'
-    compile 'org.codehaus.groovy:groovy-all:2.3.10'
     compile 'junit:junit:4.12'
     compile 'org.assertj:assertj-core:3.1.0'
     compile 'net.serenity-bdd:serenity-cucumber:1.9.5'
     
     
 
-}
-
-test {
-    testLogging {
-        showStandardStreams = true
-    }
-    /* Pass all system properties: */
-    systemProperties System.getProperties()
 }
 
 gradle.startParameter.continueOnFailure = true

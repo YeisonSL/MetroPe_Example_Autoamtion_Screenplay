@@ -1,8 +1,10 @@
 package pe.cybermetro.exceptions;
+ 
+import static pe.cybermetro.userinterfaces.CyberMetroCartPage.*;
 
 public class UnexpectedProduct extends Error {
 
-    public static final String UNEXPECTED_PRODUCT_CART="No se agrego el producto al carrito";
+    public static final String UNEXPECTED_PRODUCT_CART="No se agrego el producto" + PRODUCT_IN_THE_CART + " al carrito" ;
 
     public UnexpectedProduct(String message , Throwable cause ){
         super(message, cause);

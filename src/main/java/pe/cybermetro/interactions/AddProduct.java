@@ -29,7 +29,7 @@ public class AddProduct implements Task {
 	@Override
 	public <T extends Actor> void performAs(T actor) {
 
-					actor.attemptsTo(SelectProduct.selectProduct(element, product));
+					actor.attemptsTo(SelectNameProduct.selectProduct(element, product));
 					actor.attemptsTo(WaitForElement.visibility(elementBtn, 3));
 					actor.attemptsTo(Scroll.to(elementBtn));
 					actor.attemptsTo(WaitForElement.visibility(elementBtn, 3));
