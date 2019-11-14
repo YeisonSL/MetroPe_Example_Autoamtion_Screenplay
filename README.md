@@ -20,3 +20,4 @@ Para correr el proyecto se necesita Java JDK 1.8 y Gradle preferiblemente con la
 "gradle clean test aggregate" es el comando que correrá los tests y generará el reporte en la carpeta /target/site/serenity/# Liniope
 # Liniope
 # Liniope
+# Liniope
